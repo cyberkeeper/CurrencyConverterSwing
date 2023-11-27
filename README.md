@@ -11,7 +11,7 @@ This is a simple currency converter application for demonstrating Java Swing. Th
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![screenshot](https://github.com/cyberkeeper/CurrencyConverterGUI/assets/40637121/6596407f-2277-4919-b326-64a6c0b86af8)
 
 
 ## FAQ

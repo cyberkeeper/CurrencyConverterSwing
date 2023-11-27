@@ -31,7 +31,7 @@ public class Currency {
             {0.77, 0.88, 1}};
 
     /**
-     * Constructor for this class. This method is called whenever a new Currency class instance is created ie.
+     * Constructor for this class. This method is called whenever a new Currency class instance is created i.e.
      * <code>Currency demo = new Currency();</code><br>
      * All classes have constructor methods, and they are used to set up the bits and pieces within the class.
      */
@@ -92,14 +92,14 @@ public class Currency {
 
     /**
      * This method is called only when the "Custom create" option is ticked on the GUI form designer.
-     * This option has been ticked for the two JComboboxes so that the currencies can be added before anything is
+     * This option has been ticked for the two JCombo boxes so that the currencies can be added before anything is
      * shown on screen.
      */
     private void createUIComponents() {
         cbFrom = new JComboBox();
         cbDestination = new JComboBox();
 
-        //add the currencies to the combobox. A normal for loop or a while loop would also work here.
+        //add the currencies to the combo box. A normal for loop or a while loop would also work here.
         for (String curr : currency) {
             cbFrom.addItem(curr);
             cbDestination.addItem(curr);
