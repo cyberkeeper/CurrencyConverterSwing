@@ -18,8 +18,16 @@ This is a simple currency converter application for demonstrating Java Swing. Th
 
 #### How do I run the application?
 
-To run the application either download all the files required by the project, open and run from within IntelliJ.
-Or download the JAR file from the Releases section and run that.
+To run the application download all the files in the release. Method 1 worked on Windows 10 Pro but generated an error on Windows 11 Pro. If you receive a "Java Exception has occurred" message when double clicking the JAR file. Use method 2.
+
+1. Simplest way to run is by double clicking the JAR file.
+2. Double click the Currency Convert.lnk file
+
+
+The Currency Converter application has been tested on Microsoft Windows 10 Pro and Microsoft Windows 11 Pro.
+The program has been tested with the following SDKs,
+- Java 18 
+- Java 20
 
 
 #### Could this application be improved?
@@ -29,5 +37,3 @@ Yes, it has been kept simple to illustrate the basic structure of the program. I
 #### Does this need to be compiled in IntelliJ
 
 Yes, the project makes use of the IntelliJ Java UI Designer.
-
-
