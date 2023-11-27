@@ -79,6 +79,10 @@ public class Currency {
             //update the screen with the result
             String output = String.format("You will receive %.2f %s", result, cbDestination.getSelectedItem());
             labelOutput.setText(output);
+
+            //create a string which contains the full information about the conversion that just took place. Output string to console.
+            String logOutput = String.format("Converting %.2f %s to %s gives %.2f.",amount,cbFrom.getSelectedItem(),cbDestination.getSelectedItem(), result);
+            System.out.println(logOutput);
         }catch (NumberFormatException nfe)
         {
             //the Double.parseDouble throws this type of exception so deal with it.

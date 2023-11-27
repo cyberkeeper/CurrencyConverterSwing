@@ -21,7 +21,10 @@ public class Main {
         //create the outer JFrame and give it a title
         JFrame frame = new JFrame("Currency Converter");
 
-        //set the content pane. This is the the main panel in the form. Change the permission of
+        Image image = Toolkit.getDefaultToolkit().getImage(getClass().getResource("Icon-Money.png"));
+        frame.setIconImage(image);
+
+        //set the content pane. This is the main panel in the form. Change the permission of
         //currencyForm from private to public in the Currency.java file.
         frame.setContentPane(new Currency().currencyForm);
 
