@@ -1,12 +1,17 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.NumberFormat;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * This class contains the Java Swing components for the GUI. The methods which handle the events generated are
  * handled here.
  */
 public class Currency {
+    //the text for what appears on screen is stored in a resource bundle.
+    private final ResourceBundle messages;
     private JTextField txtFrom;
     private JComboBox cbFrom;
     private JComboBox cbDestination;
@@ -14,6 +19,8 @@ public class Currency {
     // changed the default private access modifier to public so that it can be used in the Main.java class.
     public JPanel currencyForm;
     private JLabel labelOutput;
+    private JLabel labelConvert;
+    private JLabel labelTo;
 
     //an array containing 3 currencies for conversion. Make it final as it won't be changed after being initialised.
     private final String[] currency = {"GBP", "EUR", "USD"};
@@ -36,7 +43,13 @@ public class Currency {
      * All classes have constructor methods, and they are used to set up the bits and pieces within the class.
      */
     public Currency() {
+        //initialise the resource bundles
+        System.out.println(Locale.getDefault());
+        messages = ResourceBundle.getBundle("converter");
 
+        //set a shortcut, the user can use Alt + C instead of using the mouse to press the button.
+        btnConvert.setMnemonic('C');
+        btnConvert.setDisplayedMnemonicIndex(0);
 
         // When the convert button is pressed this method will be called.
         btnConvert.addActionListener(new ActionListener() {
@@ -68,7 +81,7 @@ public class Currency {
 
             //check if the user entered a number less than 0. If it was throw an exception
             if(amount < 0)
-                throw new Exception("The initial amount must be greater than 0");
+                throw new Exception(messages.getString("underZero"));
 
             //get the conversion rate
             double convRate = convert[from][dest];
@@ -76,21 +89,36 @@ public class Currency {
             //do the conversion
             double result = convRate * amount;
 
+            //create a currency number formatter
+            NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
+
+            //set the details of the currency number formatter with details of the appropriate currency
+            if(cbDestination.getSelectedItem().equals("EUR")) {
+                currencyFormatter.setCurrency(java.util.Currency.getInstance("EUR"));
+            }else if(cbDestination.getSelectedItem().equals("USD")) {
+                currencyFormatter.setCurrency(java.util.Currency.getInstance("USD"));
+            }else{
+                currencyFormatter.setCurrency(java.util.Currency.getInstance("GBP"));
+            }
+
+            //format the converted amount to the correct format
+            String strResult = currencyFormatter.format(result);
+
             //update the screen with the result
-            String output = String.format("You will receive %.2f %s", result, cbDestination.getSelectedItem());
+            String output = String.format(messages.getString("output"), strResult);
             labelOutput.setText(output);
 
             //create a string which contains the full information about the conversion that just took place. Output string to console.
-            String logOutput = String.format("Converting %.2f %s to %s gives %.2f.",amount,cbFrom.getSelectedItem(),cbDestination.getSelectedItem(), result);
+            String logOutput = String.format(messages.getString("logOutput"),amount,cbFrom.getSelectedItem(), strResult);
             System.out.println(logOutput);
         }catch (NumberFormatException nfe)
         {
             //the Double.parseDouble throws this type of exception so deal with it.
-            JOptionPane.showMessageDialog(null,"The input must be a number","Conversion error",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,messages.getString("notNum"),messages.getString("convErr"),JOptionPane.ERROR_MESSAGE);
         }catch (Exception e)
         {
             //in the code above an exception is thrown if the initial amount entered is < 0, deal with it.
-            JOptionPane.showMessageDialog(null, e.getMessage(),"Conversion error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(),messages.getString("convErr"), JOptionPane.ERROR_MESSAGE);
         }
     }
 

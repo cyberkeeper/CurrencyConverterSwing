@@ -1,11 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * The starting point for the application.
  * @author ahart
  */
 public class Main {
+
     public static void main(String[] args) {
         //create a new instance of the Main class.
         Main ccApp = new Main();
@@ -14,12 +17,21 @@ public class Main {
     }
 
     /**
-     * This method will create the an instance of the Currency JFrame which in turn holds all the
+     * This method will create an instance of the Currency JFrame which in turn holds all the
      * other components.
      */
     public void runProgram(){
+        //find out or set which locale are we running from
+        Locale whereAmI = Locale.getDefault();
+        //switch locale to Spain for testing the locale.
+        //Locale whereAmI = Locale.forLanguageTag("es");
+
+        //set the default location for the Java virtual machine
+        Locale.setDefault(whereAmI);
+
         //create the outer JFrame and give it a title
-        JFrame frame = new JFrame("Currency Converter");
+        ResourceBundle msgs = ResourceBundle.getBundle("converter");
+        JFrame frame = new JFrame(msgs.getString("title"));
 
         Image image = Toolkit.getDefaultToolkit().getImage(getClass().getResource("Icon-Money.png"));
         frame.setIconImage(image);

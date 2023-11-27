@@ -21,11 +21,12 @@
           <vspacer id="5d05e">
             <constraints/>
           </vspacer>
-          <component id="bb55" class="javax.swing.JLabel">
+          <component id="bb55" class="javax.swing.JLabel" binding="labelConvert">
             <constraints/>
             <properties>
               <focusable value="false"/>
-              <text value="Convert "/>
+              <labelFor value="3ccd2"/>
+              <text resource-bundle="converter" key="convert"/>
             </properties>
           </component>
           <component id="3ccd2" class="javax.swing.JTextField" binding="txtFrom">
@@ -35,7 +36,7 @@
               <nextFocusableComponent value="981bd"/>
               <opaque value="false"/>
               <preferredSize width="100" height="30"/>
-              <toolTipText value="Enter the amount to be converted."/>
+              <toolTipText resource-bundle="converter" key="tipConvertAmount"/>
             </properties>
           </component>
           <component id="981bd" class="javax.swing.JComboBox" binding="cbFrom" custom-create="true">
@@ -44,14 +45,15 @@
               <nextFocusableComponent value="8c353"/>
               <popupVisible value="false"/>
               <preferredSize width="100" height="30"/>
-              <toolTipText value="Select the source currency"/>
+              <toolTipText resource-bundle="converter" key="tipSource"/>
             </properties>
           </component>
-          <component id="ff26d" class="javax.swing.JLabel">
+          <component id="ff26d" class="javax.swing.JLabel" binding="labelTo">
             <constraints/>
             <properties>
               <focusable value="false"/>
-              <text value="to"/>
+              <labelFor value="8c353"/>
+              <text resource-bundle="converter" key="to"/>
             </properties>
           </component>
           <component id="8c353" class="javax.swing.JComboBox" binding="cbDestination" custom-create="true">
@@ -60,7 +62,7 @@
               <nextFocusableComponent value="ca73a"/>
               <popupVisible value="false"/>
               <preferredSize width="100" height="30"/>
-              <toolTipText value="Select the destination currency"/>
+              <toolTipText resource-bundle="converter" key="tipDest"/>
             </properties>
           </component>
         </children>
@@ -88,7 +90,7 @@
           <component id="ca73a" class="javax.swing.JButton" binding="btnConvert">
             <constraints/>
             <properties>
-              <text value="Convert"/>
+              <text resource-bundle="converter" key="convert"/>
             </properties>
           </component>
           <hspacer id="cd5a2">
@@ -101,8 +103,8 @@
             <constraints/>
             <properties>
               <focusable value="false"/>
-              <text value="The converted amount will appear here."/>
-              <toolTipText value="The converted amount will be shown here."/>
+              <text resource-bundle="converter" key="emptyOutput"/>
+              <toolTipText resource-bundle="converter" key="emptyOutput"/>
             </properties>
           </component>
         </children>

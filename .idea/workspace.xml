@@ -9,11 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99449157-afdd-4007-a526-42ca00f0d22a" name="Changes" comment="Application code in place.">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/CurrencyConverterGUI_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+    <list default="true" id="99449157-afdd-4007-a526-42ca00f0d22a" name="Changes" comment="Internalisation added to the application. Issues #3 and #4 completed.">
+      <change afterPath="$PROJECT_DIR$/src/converter.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/converter_es.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CurrencyConverterGUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CurrencyConverterGUI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Currency.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Currency.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Currency.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -52,11 +52,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "318",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\sourceCode\Java\CurrencyConverterGUI\src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -82,7 +89,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701083177203</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added deployment details.">
+      <option name="closed" value="true" />
+      <created>1701094619807</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701094619807</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +113,29 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Application code in place." />
-    <option name="LAST_COMMIT_MESSAGE" value="Application code in place." />
+    <MESSAGE value="Added deployment details." />
+    <MESSAGE value="Internalisation added to the application. Issues #3 and #4 completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Internalisation added to the application. Issues #3 and #4 completed." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Currency.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Currency.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Currency.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
