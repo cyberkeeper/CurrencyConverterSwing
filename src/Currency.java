@@ -64,7 +64,29 @@ public class Currency {
                 convertCurrency();
             }
         });
+        //add the Action Listener to the two combo boxes. The same Action Listener is used for both
+        //combo boxes.
+        cbDestination.addActionListener(cbAL);
+        cbFrom.addActionListener(cbAL);
     }
+
+    /**
+     * This ActionListener is added to the source and destination combo boxes. The same action is
+     * required for both combo boxes so the code was moved to this single location to prevent
+     * duplication of code.
+     */
+    ActionListener cbAL = new ActionListener() {
+        /**
+         * Invoked when an action occurs.
+         *
+         * @param e the event to be processed
+         */
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            //call the method which will do the conversion and update what is shown in screen
+            convertCurrency();
+        }
+    };
 
     /**
      * This method contains the code the convert from one currency to another currency
@@ -90,17 +112,15 @@ public class Currency {
             double result = convRate * amount;
 
             //create a currency number formatter
-            //NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
             NumberFormat currencyFormatter;
             //set the details of the currency number formatter with details of the appropriate currency
             if(cbDestination.getSelectedItem().equals("EUR")) {
-                //currencyFormatter.setCurrency(java.util.Currency.getInstance("EUR"));
-                currencyFormatter = NumberFormat.getCurrencyInstance(new Locale("es", "ES"));
+                //create a Locale with Spanish language and country Spain
+                Locale aLocale = new Locale.Builder().setLanguage("es").setRegion("ES").build();
+                currencyFormatter = NumberFormat.getCurrencyInstance(aLocale);
             }else if(cbDestination.getSelectedItem().equals("USD")) {
-                //currencyFormatter.setCurrency(java.util.Currency.getInstance("USD"));
                 currencyFormatter = NumberFormat.getCurrencyInstance(Locale.US);
             }else{
-                //currencyFormatter.setCurrency(java.util.Currency.getInstance("GBP"));
                 currencyFormatter = NumberFormat.getCurrencyInstance(Locale.UK);
             }
 
@@ -143,4 +163,6 @@ public class Currency {
         cbFrom.setSelectedIndex(0);
         cbDestination.setSelectedIndex(1);
     }
+
+
 }

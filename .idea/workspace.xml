@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99449157-afdd-4007-a526-42ca00f0d22a" name="Changes" comment="Fixed issue #5.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/converter.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/converter_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter_es.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +129,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Currency.java</url>
-          <line>114</line>
+          <line>134</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
