@@ -9,13 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99449157-afdd-4007-a526-42ca00f0d22a" name="Changes" comment="Internalisation added to the application. Issues #3 and #4 completed.">
-      <change afterPath="$PROJECT_DIR$/src/converter.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/converter_es.properties" afterDir="false" />
+    <list default="true" id="99449157-afdd-4007-a526-42ca00f0d22a" name="Changes" comment="Fixed issue #5.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Currency.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Currency.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/converter.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/converter_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter_es.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +44,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "OverrideImplement.generate.javadoc": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "318",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;318&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\sourceCode\Java\CurrencyConverterGUI\src" />
@@ -97,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701094619807</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Internationalisation added to the application. Issues #3 and #4 completed.">
+      <option name="closed" value="true" />
+      <created>1701122637749</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701122637749</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,24 +121,16 @@
     <MESSAGE value="Application code in place." />
     <MESSAGE value="Added deployment details." />
     <MESSAGE value="Internalisation added to the application. Issues #3 and #4 completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Internalisation added to the application. Issues #3 and #4 completed." />
+    <MESSAGE value="Internationalisation added to the application. Issues #3 and #4 completed." />
+    <MESSAGE value="Fixed issue #5." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue #5." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Currency.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Currency.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Currency.java</url>
-          <line>111</line>
+          <line>114</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

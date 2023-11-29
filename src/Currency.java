@@ -90,15 +90,18 @@ public class Currency {
             double result = convRate * amount;
 
             //create a currency number formatter
-            NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
-
+            //NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
+            NumberFormat currencyFormatter;
             //set the details of the currency number formatter with details of the appropriate currency
             if(cbDestination.getSelectedItem().equals("EUR")) {
-                currencyFormatter.setCurrency(java.util.Currency.getInstance("EUR"));
+                //currencyFormatter.setCurrency(java.util.Currency.getInstance("EUR"));
+                currencyFormatter = NumberFormat.getCurrencyInstance(new Locale("es", "ES"));
             }else if(cbDestination.getSelectedItem().equals("USD")) {
-                currencyFormatter.setCurrency(java.util.Currency.getInstance("USD"));
+                //currencyFormatter.setCurrency(java.util.Currency.getInstance("USD"));
+                currencyFormatter = NumberFormat.getCurrencyInstance(Locale.US);
             }else{
-                currencyFormatter.setCurrency(java.util.Currency.getInstance("GBP"));
+                //currencyFormatter.setCurrency(java.util.Currency.getInstance("GBP"));
+                currencyFormatter = NumberFormat.getCurrencyInstance(Locale.UK);
             }
 
             //format the converted amount to the correct format
