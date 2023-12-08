@@ -1,19 +1,29 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
  * This class contains the Java Swing components for the GUI. The methods which handle the events generated are
  * handled here.
+ *
+ * The three JRadioButtons which are used to select the destination currency are inside a ButtonGroup. This is set up
+ * entirely within the visual form view. Select a JRadioButton, look for the 'ButtonGroup' property and create a new
+ * ButtonGroup. Click on the other RadioButtons and update their ButtonGroup property to the same button group name. By
+ * adding the JRadioButtons to a ButtonGroup only one JRadioButton can be selected at any one time.  *
  */
 public class Currency {
     private JTextField txtFrom;
     private JComboBox cbFrom;
-    private JComboBox cbDestination;
     private JButton btnConvert;
     // changed the default private access modifier to public so that it can be used in the Main.java class.
     public JPanel currencyForm;
     private JLabel labelOutput;
+    private JRadioButton rbDollars;
+    private JRadioButton rbPounds;
+    private JRadioButton rbEuros;
+    private JPanel rbPanel;
+    private ButtonGroup rbGroupDest;
 
     //an array containing 3 currencies for conversion. Make it final as it won't be changed after being initialised.
     private final String[] currency = {"GBP", "EUR", "USD"};
@@ -59,9 +69,19 @@ public class Currency {
     private void convertCurrency() {
         //the try statement is required because the user might be an idiot and enter a non-number in the input field!
         try {
-            //get the selected items from the combo boxes. The indexes are zero based like arrays.
+            //get the selected item from the source combo box. The indexes are zero based like arrays.
             int from = cbFrom.getSelectedIndex();
-            int dest = cbDestination.getSelectedIndex();
+
+            //get the selected item from the destination radio button group. Check which radio button is selected and
+            //set the dest variable to a number equal to the index of that currency in the currency array.
+            int dest;
+            if(rbDollars.isSelected())
+                dest = 2;
+            else if (rbPounds.isSelected()) {
+                dest =0;
+            }else
+                //default to euros
+                dest = 1;
 
             //get the amount to be converted
             double amount = Double.parseDouble(txtFrom.getText());
@@ -76,12 +96,17 @@ public class Currency {
             //do the conversion
             double result = convRate * amount;
 
-            //update the screen with the result
-            String output = String.format("You will receive %.2f %s", result, cbDestination.getSelectedItem());
+            //get the preferred size of the label, so we can reset it to the same size after changing the text.
+            Dimension sd = labelOutput.getPreferredSize();
+            //format output string
+            String output = String.format("You will receive %.2f %s", result, rbGroupDest.getSelection().getActionCommand());
+            //update label text
             labelOutput.setText(output);
+            //reset size of label back to what it was. This side steps the automatic resizing of the JPanel when text changes.
+            labelOutput.setPreferredSize(sd);
 
             //create a string which contains the full information about the conversion that just took place. Output string to console.
-            String logOutput = String.format("Converting %.2f %s to %s gives %.2f.",amount,cbFrom.getSelectedItem(),cbDestination.getSelectedItem(), result);
+            String logOutput = String.format("Converting %.2f %s to %s gives %.2f.",amount,cbFrom.getSelectedItem(),rbGroupDest.getSelection().getActionCommand(), result);
             System.out.println(logOutput);
         }catch (NumberFormatException nfe)
         {
@@ -101,15 +126,12 @@ public class Currency {
      */
     private void createUIComponents() {
         cbFrom = new JComboBox();
-        cbDestination = new JComboBox();
 
         //add the currencies to the combo box. A normal for loop or a while loop would also work here.
         for (String curr : currency) {
             cbFrom.addItem(curr);
-            cbDestination.addItem(curr);
         }
         //set the default currencies that will be displayed in the combo boxes
         cbFrom.setSelectedIndex(0);
-        cbDestination.setSelectedIndex(1);
     }
 }

@@ -14,7 +14,7 @@ public class Main {
     }
 
     /**
-     * This method will create the an instance of the Currency JFrame which in turn holds all the
+     * This method will create an instance of the Currency JFrame which in turn holds all the
      * other components.
      */
     public void runProgram(){
