@@ -21,12 +21,11 @@
           <vspacer id="5d05e">
             <constraints/>
           </vspacer>
-          <component id="bb55" class="javax.swing.JLabel" binding="labelConvert">
+          <component id="bb55" class="javax.swing.JLabel">
             <constraints/>
             <properties>
               <focusable value="false"/>
-              <labelFor value="3ccd2"/>
-              <text resource-bundle="converter" key="convert"/>
+              <text value="Convert "/>
             </properties>
           </component>
           <component id="3ccd2" class="javax.swing.JTextField" binding="txtFrom">
@@ -36,43 +35,26 @@
               <nextFocusableComponent value="981bd"/>
               <opaque value="false"/>
               <preferredSize width="100" height="30"/>
-              <toolTipText resource-bundle="converter" key="tipConvertAmount"/>
+              <toolTipText value="Enter the amount to be converted."/>
             </properties>
           </component>
           <component id="981bd" class="javax.swing.JComboBox" binding="cbFrom" custom-create="true">
             <constraints/>
             <properties>
-              <nextFocusableComponent value="8c353"/>
               <popupVisible value="false"/>
               <preferredSize width="100" height="30"/>
-              <toolTipText resource-bundle="converter" key="tipSource"/>
+              <toolTipText value="Select the source currency"/>
             </properties>
           </component>
-          <component id="ff26d" class="javax.swing.JLabel" binding="labelTo">
+          <component id="ff26d" class="javax.swing.JLabel">
             <constraints/>
             <properties>
               <focusable value="false"/>
-              <labelFor value="8c353"/>
-              <text resource-bundle="converter" key="to"/>
-            </properties>
-          </component>
-          <component id="8c353" class="javax.swing.JComboBox" binding="cbDestination" custom-create="true">
-            <constraints/>
-            <properties>
-              <nextFocusableComponent value="ca73a"/>
-              <popupVisible value="false"/>
-              <preferredSize width="100" height="30"/>
-              <toolTipText resource-bundle="converter" key="tipDest"/>
+              <text value="to"/>
             </properties>
           </component>
         </children>
       </grid>
-      <hspacer id="3981e">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-      </hspacer>
       <vspacer id="29a9e">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
@@ -85,12 +67,14 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties/>
-        <border type="none"/>
+        <border type="line">
+          <color color="-4473925"/>
+        </border>
         <children>
           <component id="ca73a" class="javax.swing.JButton" binding="btnConvert">
             <constraints/>
             <properties>
-              <text resource-bundle="converter" key="convert"/>
+              <text value="Convert"/>
             </properties>
           </component>
           <hspacer id="cd5a2">
@@ -103,12 +87,80 @@
             <constraints/>
             <properties>
               <focusable value="false"/>
-              <text resource-bundle="converter" key="emptyOutput"/>
-              <toolTipText resource-bundle="converter" key="emptyOutput"/>
+              <text value="The converted amount will appear here."/>
+              <toolTipText value="The converted amount will be shown here."/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="72cb7" binding="rbPanel" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <toolTipText value="Select the destination currency"/>
+        </properties>
+        <border type="empty">
+          <size top="0" left="5" bottom="0" right="0"/>
+        </border>
+        <children>
+          <hspacer id="3e062">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+          </hspacer>
+          <vspacer id="993bb">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+          </vspacer>
+          <component id="90274" class="javax.swing.JRadioButton" binding="rbEuros">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <actionCommand value="Euros"/>
+              <name value="Euros"/>
+              <text value="Euros"/>
+            </properties>
+          </component>
+          <component id="3fb85" class="javax.swing.JRadioButton" binding="rbDollars">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <actionCommand value="USD"/>
+              <label value="US Dollars"/>
+              <name value=""/>
+              <selected value="true"/>
+              <text value="US Dollars"/>
+            </properties>
+          </component>
+          <component id="2598a" class="javax.swing.JRadioButton" binding="rbPounds">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <actionCommand value="GBP"/>
+              <name value=""/>
+              <text value="GB Pounds"/>
             </properties>
           </component>
         </children>
       </grid>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="rbGroupDest" bound="true">
+      <member id="3fb85"/>
+      <member id="2598a"/>
+      <member id="90274"/>
+    </group>
+  </buttonGroups>
 </form>
