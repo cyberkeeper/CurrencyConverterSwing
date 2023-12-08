@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
  * The three JRadioButtons which are used to select the destination currency are inside a ButtonGroup. This is set up
  * entirely within the visual form view. Select a JRadioButton, look for the 'ButtonGroup' property and create a new
  * ButtonGroup. Click on the other RadioButtons and update their ButtonGroup property to the same button group name. By
- * adding the JRadioButtons to a ButtonGroup only one JRadioButton can be selected at any one time.  *
+ * adding the JRadioButtons to a ButtonGroup only one JRadioButton can be selected at any one time.
  */
 public class Currency {
     private JTextField txtFrom;

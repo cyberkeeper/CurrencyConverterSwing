@@ -68,7 +68,7 @@
         </constraints>
         <properties/>
         <border type="line">
-          <color color="-4473925"/>
+          <color color="-16645630"/>
         </border>
         <children>
           <component id="ca73a" class="javax.swing.JButton" binding="btnConvert">
