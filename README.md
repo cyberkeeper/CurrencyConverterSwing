@@ -1,8 +1,16 @@
 
 # Currency Converter Java Swing
 
-This is a simple currency converter application for demonstrating Java Swing. The application was created in IntelliJ using SDK 20.
+This is a simple currency converter application for demonstrating Java Swing,  the application was created in IntelliJ UI Designer. 
 
+Although not required for the course this code makes uses of a resource bundle to demonstrate how all displayed text strings could be contained in a single place. Keeping all string in a single places makes maintenance a bit easier. It also allows internalisation to be included, this example includes English and Spanish text. By default English text will be shown, to test Spanish find the following lines in the runProgram method in the Main.java file.
+
+```
+Locale whereAmI = Locale.getDefault();
+//Locale whereAmI = Locale.forLanguageTag("es");
+```
+
+Comment out the 'getDefault' line and enable the 'es' line to switch to Spanish.
 
 ## Authors
 
@@ -15,7 +23,7 @@ This is a simple currency converter application for demonstrating Java Swing. Th
 
 ## Requirements
 Microsoft Windows 10 or Windows 11
-Java SDK 18 or 20
+Java SDK 18, 20 or 22
 
 ## Deployment
 -Download the CurrencyConverter.zip file
@@ -40,6 +48,7 @@ The Currency Converter application has been tested on Microsoft Windows 10 Pro a
 The program has been tested with the following SDKs,
 - Java 18 
 - Java 20
+- Java 22
 
 
 ### Could this application be improved?
